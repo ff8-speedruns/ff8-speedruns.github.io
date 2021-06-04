@@ -1,2 +1,1 @@
-# brofar.github.io
-Brofar github page
+[FF8 Repo](https://brofar.github.io/ff8)
