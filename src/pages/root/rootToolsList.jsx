@@ -1,4 +1,4 @@
-import { ActionIcon, Badge, Table, Anchor, Text, ScrollArea } from '@mantine/core';
+import { ActionIcon, Badge, Table, Anchor, Text, ScrollArea, Container } from '@mantine/core';
 import { IconBrandGithub } from '@tabler/icons-react'
 
 const statuses = {
@@ -34,7 +34,7 @@ const data = [
     {
         title: 'Cheat Engine Tables (PC)',
         status: statuses.WORKING,
-        description: 'A file for use with Cheat Engine to manipulate various aspects of game memory.',
+        description: 'A file for use with Cheat Engine to read or manipulate various aspects of game memory.',
         link: 'https://github.com/ff8-speedruns/ff8-memory/releases',
         github: 'https://github.com/ff8-speedruns/ff8-memory'
     },
@@ -94,7 +94,7 @@ export default function RootToolsList() {
         return (
             <tr key={row.title}>
                 <td>
-                    <Anchor link={row.link}>
+                    <Anchor href={row.link}>
                         {row.title}
                     </Anchor>
                 </td>
@@ -110,18 +110,20 @@ export default function RootToolsList() {
     });
 
     return (
-        <ScrollArea>
-            <Table sx={{ minWidth: 800 }} verticalSpacing="xs">
-                <thead>
-                    <tr>
-                        <th>Project</th>
-                        <th>Status</th>
-                        <th>Description</th>
-                        <th>Source</th>
-                    </tr>
-                </thead>
-                <tbody>{rows}</tbody>
-            </Table>
-        </ScrollArea>
+        <Container>
+            <ScrollArea>
+                <Table sx={{ minWidth: 800 }} verticalSpacing="xs">
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Status</th>
+                            <th>Description</th>
+                            <th>Source</th>
+                        </tr>
+                    </thead>
+                    <tbody>{rows}</tbody>
+                </Table>
+            </ScrollArea>
+        </Container>
     );
 }

@@ -1,19 +1,22 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ErrorPage from "./routes/error-page";
 import Root from "./routes/root";
+import { MantineProvider, ColorSchemeProvider } from '@mantine/core';
+import { useHotkeys, useLocalStorage } from '@mantine/hooks';
 
-function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Root />,
-      errorElement: <ErrorPage />,
-    }
-  ]);
+export default function App() {
+  const [colorScheme, setColorScheme] = useLocalStorage({
+    key: 'mantine-color-scheme',
+    defaultValue: 'light',
+    getInitialValueInEffect: true,
+  });
+
+  const toggleColorScheme = (value) => setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
+  useHotkeys([['mod+J', () => toggleColorScheme()]]); 
 
   return (
-      <RouterProvider router={router} />
+    <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
+      <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
+        <Root />
+      </MantineProvider>
+    </ColorSchemeProvider>
   )
 }
-
-export default App
