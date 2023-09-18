@@ -4,7 +4,7 @@ import { IconBrandGithub } from '@tabler/icons-react'
 const statuses = {
     WORKING: { text: 'Working', color: 'green' },
     NEEDSTESTERS: { text: 'Needs Testers', color: 'yellow' },
-    UNDERCONSTRUCTION: { text: 'Under Construction', color: 'orange' },
+    DEVELOPMENT: { text: 'Development', color: 'orange' },
     EXTERNAL: { text: 'External Link', color: 'gray' },
 
 }
@@ -26,7 +26,7 @@ const data = [
     },
     {
         title: 'Card RNG Manip Tool',
-        status: statuses.UNDERCONSTRUCTION,
+        status: statuses.DEVELOPMENT,
         description: 'A webpage to keep track of early game RNG events to help with Zell card.',
         link: 'https://galbadia.garden/card-manip/',
         github: 'https://github.com/ff8-speedruns/card-manip'
@@ -93,11 +93,11 @@ export default function RootToolsList() {
     const rows = data.map((row) => {
         return (
             <tr key={row.title}>
-                <td>
+                <th scope="row" width={180}>
                     <Anchor href={row.link}>
                         {row.title}
                     </Anchor>
-                </td>
+                </th>
                 <td><Badge color={row.status.color} variant="filled">{row.status.text}</Badge></td>
                 <td><Text fz="sm">{row.description}</Text></td>
                 <td>
@@ -112,7 +112,7 @@ export default function RootToolsList() {
     return (
         <Container>
             <ScrollArea>
-                <Table sx={{ minWidth: 800 }} verticalSpacing="xs">
+                <Table sx={{ minWidth: 800 }} verticalSpacing="xs" highlightOnHover>
                     <thead>
                         <tr>
                             <th>Project</th>
