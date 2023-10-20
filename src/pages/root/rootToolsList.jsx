@@ -18,11 +18,11 @@ const data = [
         github: 'https://github.com/ff8-speedruns/caraway-code'
     },
     {
-        title: 'Card RNG Manip Tool',
+        title: 'Card RNG Manip',
         status: statuses.DEVELOPMENT,
         description: 'A webpage to keep track of early game RNG events to help with Zell card.',
-        link: 'https://galbadia.garden/card-manip/',
-        github: 'https://github.com/ff8-speedruns/card-manip'
+        link: 'https://galbadia.garden/cards/',
+        github: 'https://github.com/ff8-speedruns/cards'
     },
     {
         title: 'Cheat Engine Tables (PC)',
