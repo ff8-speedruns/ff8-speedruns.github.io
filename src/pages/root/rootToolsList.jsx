@@ -11,13 +11,6 @@ const statuses = {
 
 const data = [
     {
-        title: 'Caraway Code',
-        status: statuses.WORKING,
-        description: 'Reads a specific memory address from FF8_EN or FF8_FR (Steam 2013 / non-remaster) containing the code to get into the Caraway mansion. Note: This tool is illegal in speedruns as it reads directly from game memory.',
-        link: 'https://github.com/ff8-speedruns/ff8-Julia/releases',
-        github: 'https://github.com/ff8-speedruns/ff8-Julia'
-    },
-    {
         title: 'Caraway Code - Poles',
         status: statuses.NEEDSTESTERS,
         description: 'Alternate website for the pole manip',
