@@ -1,1 +1,1 @@
-[FF8 Repo](https://galbadia.garden)
+[FF8 Repo](https://tools.ff8.wiki)

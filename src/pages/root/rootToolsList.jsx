@@ -14,14 +14,14 @@ const data = [
         title: 'Caraway Code - Poles',
         status: statuses.NEEDSTESTERS,
         description: 'Alternate website for the pole manip',
-        link: 'https://galbadia.garden/caraway-code',
+        link: '/caraway-code',
         github: 'https://github.com/ff8-speedruns/caraway-code'
     },
     {
         title: 'Card RNG Manip',
         status: statuses.DEVELOPMENT,
         description: 'A webpage to keep track of early game RNG events to help with Zell card.',
-        link: 'https://galbadia.garden/cards/',
+        link: '/cards/',
         github: 'https://github.com/ff8-speedruns/cards'
     },
     {
@@ -42,7 +42,7 @@ const data = [
         title: 'Encounter Calculator',
         status: statuses.WORKING,
         description: 'Using the previous encounter formation ID along with the encounter counter (total number of encounters) we can tell which encounter formation we will receive next.',
-        link: 'https://galbadia.garden/encounter-calculator',
+        link: '/encounter-calculator',
         github: 'https://github.com/ff8-speedruns/encounter-calculator'
     },
     {
@@ -56,21 +56,21 @@ const data = [
         title: 'Final Party Manipulation',
         status: statuses.NEEDSTESTERS,
         description: 'Conversion of Pingval\'s final party manipulation code for Playstation and awesomeWaves\' modifications for PC ruby script to JS, so that it can be run on the web without requiring runners to install Ruby.',
-        link: 'https://galbadia.garden/final-party-manip',
+        link: '/final-party-manip',
         github: 'https://github.com/ff8-speedruns/final-party-manip'
     },
     {
         title: 'Fish Fin Manip',
         status: statuses.WORKING,
         description: 'Table lookup for the fish fin manipulation.',
-        link: 'https://galbadia.garden/fish-fins',
+        link: '/fish-fins',
         github: 'https://github.com/ff8-speedruns/fish-fins'
     },
     {
         title: 'Kaivel\'s Fish Fin Manip',
         status: statuses.WORKING,
         description: 'Table lookup for Kaivel\'s alternate fish fin manipulation.',
-        link: 'https://galbadia.garden/fish-fins-kai',
+        link: '/fish-fins-kai',
         github: 'https://github.com/ff8-speedruns/fish-fins-kai'
     },
     {
