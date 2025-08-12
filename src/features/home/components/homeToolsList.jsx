@@ -82,7 +82,7 @@ const data = [
     }
 ];
 
-export default function RootToolsList() {
+export default function HomeToolsList() {
     const rows = data.map((row) => {
         return (
             <tr key={row.title}>
