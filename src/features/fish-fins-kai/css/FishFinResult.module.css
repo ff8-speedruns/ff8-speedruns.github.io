@@ -1,0 +1,92 @@
+.card {
+  background-color: var(--mantine-color-body);
+  margin-bottom: var(--mantine-spacing-md);
+  box-shadow: var(--mantine-shadow-sm);
+  transition: box-shadow 0.2s ease;
+  max-width: 600px;
+}
+
+.card:hover {
+  box-shadow: var(--mantine-shadow-md);
+}
+
+.fishSection {
+  background: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+  border-radius: var(--mantine-radius-md);
+  padding: var(--mantine-spacing-md);
+  border: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-4));
+}
+
+.manipSection {
+  background: light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-7));
+  border-radius: var(--mantine-radius-sm);
+  padding: var(--mantine-spacing-sm);
+  border-left: 3px solid var(--mantine-color-blue-5);
+}
+
+.manipText {
+  font-family: var(--mantine-font-family-monospace);
+  font-size: var(--mantine-font-size-sm);
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.statIcon {
+  color: var(--mantine-color-blue-6);
+  opacity: 0.8;
+}
+
+.resetSection {
+  background: light-dark(var(--mantine-color-red-0), var(--mantine-color-dark-7));
+  border-radius: var(--mantine-radius-md);
+  padding: var(--mantine-spacing-md);
+  border: 1px solid light-dark(var(--mantine-color-red-2), var(--mantine-color-red-8));
+  border-left: 4px solid var(--mantine-color-red-6);
+}
+
+/* Mode-based visibility classes */
+.hide {
+  display: none !important;
+}
+
+.sup {
+  font-size: 0.8em;
+  vertical-align: super;
+}
+
+.sub {
+  font-size: 0.8em;
+  vertical-align: sub;
+}
+
+.limit {
+  font-weight: bold;
+}
+
+/* Styling for parsed markdown content */
+:global(.satb) {
+  color: var(--mantine-color-white);
+  font-weight: bold;
+  background: light-dark(var(--mantine-color-blue-0), var(--mantine-color-blue-9));
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+:global(.important) {
+  color: var(--mantine-color-white);
+  font-weight: bold;
+  background: light-dark(var(--mantine-color-red-0), var(--mantine-color-red-9));
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+:global(.atb) {
+  color: var(--mantine-color-white);
+  font-weight: bold;
+  background: light-dark(var(--mantine-color-yellow-0), var(--mantine-color-yellow-9));
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}

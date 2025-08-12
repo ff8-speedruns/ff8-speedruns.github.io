@@ -19,7 +19,7 @@ const data = [
     { name: 'Brofar', link: 'https://twitch.tv/brofar' }
 ];
 
-export default function HomeCredits() {
+export default function Credits() {
 
     return (
         <Container my="lg">

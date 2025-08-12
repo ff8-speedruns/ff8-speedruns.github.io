@@ -1,9 +1,39 @@
-import { HashRouter, Routes, Route, Link } from "react-router-dom";
+import { HashRouter, Routes, Route, Link, useLocation } from "react-router-dom";
 import { useDisclosure } from '@mantine/hooks';
-import { AppShell, Burger, Group, UnstyledButton, Text, ActionIcon, useMantineColorScheme } from '@mantine/core';
+import { AppShell, Burger, Group, UnstyledButton, Text, ActionIcon, useMantineColorScheme, Title } from '@mantine/core';
 import { IconSun, IconMoonStars } from '@tabler/icons-react';
 import classes from './MobileNavbar.module.css';
 import Home from './pages/HomePage';
+import FishFinsKaiPage from './pages/FishFinsKaiPage';
+import FishFinsPage from './pages/FishFinsPage';
+import CarawayCodePage from './pages/CarawayCodePage';
+import CardsPage from './pages/CardsPage';
+import EncounterCalculatorPage from './pages/EncounterCalculatorPage';
+import FinalPartyManipPage from './pages/FinalPartyManipPage';
+
+const pages = [
+  { name: 'Home', header: '', path: '/' },
+  { name: 'Codes', header: 'Caraway Code', path: '/codes' },
+  { name: 'Cards', header: 'Card Manipulation', path: '/cards' },
+  { name: 'Encounters', header: 'Encounter Calculator', path: '/encounters' },
+  { name: 'Final Party', header: 'Final Party Calculator', path: '/final-party' },
+  { name: 'Fish Fins', header: 'Fish Fins', path: '/fish-fins' },
+  { name: 'Fish Fins Kai', header: 'Kaivel\'s Fish Fins', path: '/fish-fins-kai' }
+];
+
+function PageHeader() {
+  const location = useLocation();
+  const currentPage = pages.find(page => page.path === location.pathname);
+  const pageName = currentPage ? currentPage.header : '';
+
+  return (
+    <Title order={1} mb="md" style={{
+      paddingBottom: '0.5rem'
+    }}>
+      {pageName}
+    </Title>
+  );
+}
 
 function App() {
   const [opened, { toggle }] = useDisclosure();
@@ -37,31 +67,34 @@ function App() {
                 </Text>
               </Group>
               <Group ml="xl" gap={0} visibleFrom="sm">
-                <UnstyledButton className={classes.control} component={Link} to={"/"}>Home</UnstyledButton>
-                <UnstyledButton className={classes.control} component={Link} to={"/codes"}>Codes</UnstyledButton>
-                <UnstyledButton className={classes.control} component={Link} to={"/cards"}>Cards</UnstyledButton>
-                <UnstyledButton className={classes.control} component={Link} to={"/encounters"}>Encounters</UnstyledButton>
-                <UnstyledButton className={classes.control} component={Link} to={"/final-party"}>Final Party</UnstyledButton>
-                <UnstyledButton className={classes.control} component={Link} to={"/fish-fins"}>Fish Fins</UnstyledButton>
-                <UnstyledButton className={classes.control} component={Link} to={"/fish-fins-kai"}>Fish Fins Kai</UnstyledButton>
+                {pages.map((page) => (
+                  <UnstyledButton key={page.name} className={classes.control} component={Link} to={page.path}>
+                    {page.name}
+                  </UnstyledButton>
+                ))}
               </Group>
             </Group>
           </Group>
         </AppShell.Header>
 
         <AppShell.Navbar py="md" px={4}>
-          {
-            //TODO: Replace with links to other pages
-          }
-          <UnstyledButton className={classes.control}>Home</UnstyledButton>
-          <UnstyledButton className={classes.control}>Blog</UnstyledButton>
-          <UnstyledButton className={classes.control}>Contacts</UnstyledButton>
-          <UnstyledButton className={classes.control}>Support</UnstyledButton>
+          {pages.map((page) => (
+            <UnstyledButton key={page.name} className={classes.control} component={Link} to={page.path}>
+              {page.name}
+            </UnstyledButton>
+          ))}
         </AppShell.Navbar>
 
-        <AppShell.Main >
+        <AppShell.Main mx="md">
+          <PageHeader />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/codes" element={<CarawayCodePage />} />
+            <Route path="/cards" element={<CardsPage />} />
+            <Route path="/encounters" element={<EncounterCalculatorPage />} />
+            <Route path="/final-party" element={<FinalPartyManipPage />} />
+            <Route path="/fish-fins" element={<FishFinsPage />} />
+            <Route path="/fish-fins-kai" element={<FishFinsKaiPage />} />
           </Routes>
         </AppShell.Main>
       </AppShell>

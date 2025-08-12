@@ -1,13 +1,13 @@
-import HomeHeader from "../features/home/components/homeHeader";
-import HomeToolsList from "../features/home/components/homeToolsList";
-import HomeCredits from "../features/home/components/homeCredits";
+import Header from "../features/home/components/Header";
+import ToolsList from "../features/home/components/ToolsList";
+import Credits from "../features/home/components/Credits";
 
 export default function Root() {
     return (
         <>
-            <HomeHeader />
-            <HomeToolsList />
-            <HomeCredits />
+            <Header />
+            <ToolsList />
+            <Credits />
         </>
     );
 }
