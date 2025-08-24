@@ -4,7 +4,7 @@ import { GenerateRowObject } from '../utils/calculations';
 import { MarkdownText } from '../utils/markdownParser';
 import classes from '../css/FishFinResult.module.css';
 
-export function FishFinResult({ pattern}) {
+export function FishFinResult({ pattern }) {
   const totalFins = (pattern.fish1drop || 0) + (pattern.fish2drop || 0);
 
   // Handle reset state
@@ -13,11 +13,11 @@ export function FishFinResult({ pattern}) {
       <Card withBorder radius="lg" className={classes.card} padding="lg">
         {/* Header */}
         <Group justify="space-between" mb="md">
-          <Box>
+          <Box ta="left">
             <Text fw={700} size="lg" c="red">
               {pattern.pattern.toUpperCase()}
             </Text>
-            <Text size="sm" c="dimmed">
+            <Text size="sm" c="dimmed" align>
               Index #{pattern.index}
             </Text>
           </Box>
@@ -53,7 +53,7 @@ export function FishFinResult({ pattern}) {
     <Card withBorder radius="lg" className={classes.card} padding="lg">
       {/* Header */}
       <Group justify="space-between" mb="md">
-        <Box>
+        <Box ta="left">
           <Text fw={700} size="lg" c="blue">
             {pattern.pattern.toUpperCase()}
           </Text>
@@ -89,9 +89,17 @@ export function FishFinResult({ pattern}) {
           <Box className={classes.manipSection} mb="sm">
             <Text size="sm" c="dimmed" mb={4}>Manipulation:</Text>
             <Box className={classes.manipText}>
-              <MarkdownText boldClass="satb" italicClass="important">
-                {pattern.fish1Sequence}
-              </MarkdownText>
+              <Flex align="center" justify="center" gap={4} w="100%">
+                <MarkdownText boldClass="satb" italicClass="important">
+                  {pattern.fish1Sequence}
+                </MarkdownText>
+                {">"}
+                <IconRefresh size={16} className={classes.statIcon} />
+                <Text size="sm">
+                  <span>{pattern.fish1Refreshes} refreshes</span>{' '}
+                  <span className={`limit`}>({pattern.fish1limits} limits)</span>
+                </Text>
+              </Flex>
             </Box>
           </Box>
 
