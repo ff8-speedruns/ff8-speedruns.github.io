@@ -1,55 +1,42 @@
-import { Container, Text, Title, Button, ActionIcon, Group, useMantineColorScheme } from '@mantine/core';
-import { IconSun, IconMoonStars, IconBrandDiscordFilled, IconVocabulary } from '@tabler/icons-react';
+import { Container, Text, Title, Button, Group } from '@mantine/core';
+import { ColorSchemeToggle } from '@ff8-speedruns/ui';
+import { IconBrandDiscordFilled, IconVocabulary } from '@tabler/icons-react';
+
+const LINKS = [
+    { label: 'Discord', href: 'https://discord.gg/W89guqKuj7', icon: IconBrandDiscordFilled },
+    { label: 'Wiki', href: 'https://ff8.wiki', icon: IconVocabulary },
+];
 
 export default function RootHeader() {
-
-    const { colorScheme, toggleColorScheme } = useMantineColorScheme();
-    const dark = colorScheme === 'dark';
     return (
         <Container my="xl">
-            <Group position="apart">
+            <Group justify="space-between">
                 <Title>
                     Final Fantasy{' '}
-                    <Text component="span" variant="gradient" gradient={{ from: 'blue', to: 'cyan' }} inherit>
+                    <Text component="span" variant="gradient" inherit>
                         VIII
                     </Text>
                 </Title>
-                <ActionIcon
-                    size="lg"
-                    variant="outline"
-                    color={dark ? 'yellow' : 'blue'}
-                    onClick={() => toggleColorScheme()}
-                    title="Toggle color scheme"
-                >
-                    {dark ? <IconSun size="1.1rem" /> : <IconMoonStars size="1.1rem" />}
-                </ActionIcon>
+                <ColorSchemeToggle />
             </Group>
 
-            <Text size="xl" color="dimmed" my="lg">
+            <Text size="xl" c="dimmed" my="lg">
                 This is a collection of information, resources, and tools for Final Fantasy VIII speedrunning.
             </Text>
 
             <Group>
-                <Button
-                    component="a"
-                    href="https://discord.gg/W89guqKuj7"
-                    size="md"
-                    variant="gradient"
-                    gradient={{ from: 'blue', to: 'cyan' }}
-                    leftIcon={<IconBrandDiscordFilled />}
-                >
-                    Discord
-                </Button>
-                <Button
-                    component="a"
-                    href="https://ff8.wiki"
-                    size="md"
-                    variant="gradient"
-                    gradient={{ from: 'blue', to: 'cyan' }}
-                    leftIcon={<IconVocabulary />}
-                >
-                    Wiki
-                </Button>
+                {LINKS.map(({ label, href, icon: Icon }) => (
+                    <Button
+                        key={href}
+                        component="a"
+                        href={href}
+                        size="md"
+                        variant="gradient"
+                        leftSection={<Icon />}
+                    >
+                        {label}
+                    </Button>
+                ))}
             </Group>
         </Container>
     );

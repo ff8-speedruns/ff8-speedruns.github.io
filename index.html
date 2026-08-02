@@ -4,7 +4,28 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Information, resources and tools for Final Fantasy VIII speedrunning."
+    />
     <title>Galbadia Garden</title>
+    <script>
+      // Resolve the saved colour scheme before first paint, otherwise dark-mode
+      // users get a frame of white on every load. The key is shared with every
+      // tool so the choice carries across the whole site.
+      try {
+        var s = window.localStorage.getItem('ff8-color-scheme');
+        var scheme = s === 'light' || s === 'dark' || s === 'auto' ? s : 'auto';
+        document.documentElement.setAttribute(
+          'data-mantine-color-scheme',
+          scheme !== 'auto'
+            ? scheme
+            : window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light'
+        );
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>
