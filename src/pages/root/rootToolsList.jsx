@@ -2,8 +2,7 @@ import { ActionIcon, Table, Anchor, Text, Container } from '@mantine/core';
 import { StatusBadge } from '@ff8-speedruns/ui';
 import { IconBrandGithub } from '@tabler/icons-react';
 
-// Status keys come from @ff8-speedruns/ui so this table and the badge a tool
-// shows in its own header can't drift apart.
+// Status keys come from @ff8-speedruns/ui
 const data = [
     {
         title: 'Caraway Code - Poles',
