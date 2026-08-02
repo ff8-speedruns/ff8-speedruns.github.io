@@ -48,7 +48,7 @@ const data = [
     },
     {
         title: 'Final Party Manipulation',
-        status: 'needsTesters',
+        status: 'working',
         description: 'Conversion of Pingval\'s final party manipulation code for Playstation and awesomeWaves\' modifications for PC ruby script to JS, so that it can be run on the web without requiring runners to install Ruby.',
         link: '/final-party-manip/',
         github: 'https://github.com/ff8-speedruns/final-party-manip'
