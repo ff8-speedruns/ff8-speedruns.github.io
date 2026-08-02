@@ -1,16 +1,15 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import { MantineProvider } from '@mantine/core';
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { FF8Provider } from '@ff8-speedruns/ui';
+import App from './App.jsx';
 
+import '@mantine/core/styles.css';
+import '@ff8-speedruns/ui/styles.css';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <MantineProvider
-      withGlobalStyles
-      withNormalizeCSS
-    >
+    <FF8Provider>
       <App />
-    </MantineProvider>
-  </React.StrictMode>,
-)
+    </FF8Provider>
+  </React.StrictMode>
+);
