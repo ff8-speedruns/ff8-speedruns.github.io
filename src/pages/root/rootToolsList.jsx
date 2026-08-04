@@ -6,7 +6,7 @@ import { IconBrandGithub } from '@tabler/icons-react';
 const data = [
     {
         title: 'Caraway Code - Poles',
-        status: 'needsTesters',
+        status: 'working',
         description: 'Alternate website for the pole manip',
         link: '/caraway-code/',
         github: 'https://github.com/ff8-speedruns/caraway-code'
@@ -73,6 +73,13 @@ const data = [
         description: 'The End manip created by Kaivel & romaindurand',
         link: 'https://ff8-manip.romaindurand.fr/',
         github: 'https://github.com/romaindurand/ff8-slot-manip'
+    },
+    {
+        title: 'World Map Encounters',
+        status: 'working',
+        description: 'Find where enemies appear on the world map, how often they appear, and how many you get per encounter.',
+        link: '/world-map-encounters/',
+        github: 'https://github.com/ff8-speedruns/world-map-encounters'
     }
 ];
 
