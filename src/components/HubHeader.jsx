@@ -23,7 +23,7 @@ export default function HubHeader() {
       </Group>
 
       <Text size="xl" c="dimmed" my="lg">
-        This is a collection of information, resources, and tools for Final Fantasy VIII speedrunning.
+        This is a collection of information, resources, and tools for Final Fantasy VIII speedrunning (and other fun things).
       </Text>
 
       <Group>

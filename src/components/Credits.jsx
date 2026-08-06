@@ -17,6 +17,7 @@ const CREDITS = [
   { name: 'Final Fantasy VIII (F) RAM MAP Par Beuj, Kaivel, Ony, KartSeven, AmShagar', link: 'https://docs.google.com/document/d/1unjgx4zAUUcIroed8ahxmD-9yhMHZQESjrjWuzFnML8' },
   { name: 'czardragon', link: 'https://gamehacking.org/czardragon/' },
   { name: 'Brofar', link: 'https://twitch.tv/brofar' },
+  { name: 'FFNx', link: 'https://github.com/julianxhokaxhiu/FFNx' },
 ];
 
 export default function Credits() {

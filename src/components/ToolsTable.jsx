@@ -26,11 +26,18 @@ const TOOLS = [
     github: 'https://github.com/ff8-speedruns/ff8-memory',
   },
   {
+    title: 'Controller Patches',
+    status: 'working',
+    description: 'Patches to enable analog inputs on PC and/or background controller inputs.',
+    link: 'https://github.com/ff8-speedruns/ff8-controls-randomizer/releases',
+    github: 'https://github.com/ff8-speedruns/ff8-controls-randomizer',
+  },
+  {
     title: 'Controls Randomizer',
     status: 'working',
     description: 'Randomizes controller inputs while playing FF8 by reading and shuffling the control mapping in the game\'s memory while you play. Has some configuration options.',
-    link: 'https://github.com/ff8-speedruns/ff8-controls-randomizer/releases',
-    github: 'https://github.com/ff8-speedruns/ff8-controls-randomizer',
+    link: 'https://github.com/ff8-speedruns/controller-patches/releases',
+    github: 'https://github.com/ff8-speedruns/controller-patches/',
   },
   {
     title: 'Encounter Calculator',
