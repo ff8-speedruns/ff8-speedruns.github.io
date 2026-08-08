@@ -5,9 +5,9 @@ import { IconBrandGithub } from '@tabler/icons-react';
 // Status keys come from the STATUSES vocabulary in @ff8-speedruns/ui.
 const TOOLS = [
   {
-    title: 'Caraway Code - Poles',
+    title: 'Caraway Code / Poles',
     status: 'working',
-    description: 'Alternate website for the pole manip',
+    description: 'Pole skip helper for the Caraway mansion code.',
     link: '/caraway-code/',
     github: 'https://github.com/ff8-speedruns/caraway-code',
   },
